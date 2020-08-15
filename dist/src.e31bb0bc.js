@@ -32294,7 +32294,9 @@ function Search() {
   };
 
   return _react.default.createElement("div", {
-    className: "search__base"
+    className: "search__base",
+    "data-aos": "fade-right",
+    "data-aos-duration": "1500"
   }, _react.default.createElement("input", {
     type: "text",
     name: "search",
@@ -32302,7 +32304,9 @@ function Search() {
     value: search,
     onChange: handleChange,
     placeholder: "Your search of and for history ends here."
-  }));
+  }), _react.default.createElement("button", {
+    className: "search btn"
+  }, "Search"));
 }
 },{"react":"../node_modules/react/index.js"}],"components/Landing.js":[function(require,module,exports) {
 "use strict";
@@ -32322,8 +32326,14 @@ function Landing() {
   return _react.default.createElement("section", {
     className: "landing__base"
   }, _react.default.createElement("div", {
-    className: "landing-intro"
-  }, _react.default.createElement("h3", null, "The history we've all yearned for and towards, right here in our palms."), _react.default.createElement("p", null, "Let's begin!")), _react.default.createElement(_Search.default, null));
+    className: "landing-intro",
+    "data-aos": "zoom-in-left",
+    "data-aos-duration": "1500"
+  }, _react.default.createElement("p", {
+    className: "large"
+  }, "The history we've all yearned for and towards, right here in our", _react.default.createElement("span", {
+    "data-aos": "fade-left"
+  }, " palms."))), _react.default.createElement(_Search.default, null));
 }
 },{"react":"../node_modules/react/index.js","./Search":"components/Search.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
@@ -32462,7 +32472,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34287" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38067" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

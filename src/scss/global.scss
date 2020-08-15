@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import './variables';
 
 * {
   margin: 0;
@@ -8,25 +9,105 @@
 }
 
 .landing__base {
-    background-image: url('../../assets/library.jpg');
-    height: 708px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('../../assets/library.jpg');
+  height: 708px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
+  .landing-intro {
+    width: 998px;
+    color: #fff;
+    font-size: 50px;
+    margin-left: 10%;
+  }
+
+  .landing-intro .large {
+    padding-top: 22%;
+
+    & span {
+      color: $primary;
+
+      &:hover {
+        width: 80px;
+        color: $secondary;
+        background: $text-primary;
+        transform: translateX(5px);
+        transition: all 0.5s ease-in;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .small {
+    font-size: 30px;
+    margin-top: 4%;
+    color: rgb(236, 118, 21);
+  }
+
+  @media only screen and (max-width: 576px) {
     .landing-intro {
-      width: 998px;
-      color: #fff;
-      font-size: 50px;
-      margin-left: 10%;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      font-size: 40px;
     }
-    
-    .landing-intro h3 {
-      padding-top: 17%;
+  }
+}
+
+// search section begins here.
+.search__base {
+  margin-left: 10%;
+  padding-top: 6%;
+  width: 550px;
+  display: flex;
+
+  input {
+    height: 40px;
+    width: 100%;
+    padding: 13px;
+    border-radius: 4px;
+    border: none;
+    outline-color: $primary;
+
+    &::placeholder {
+      font-size: 17px;
+    }
+  }
+
+  button {
+    height: 40px;
+    width: 155px;
+    background: $primary;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    color: $secondary;
+    font-size: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 28%;
+
+    input {
+      &::placeholder {
+        font-size: 14px;
+      }
     }
 
-    @media only screen and (max-width: 576px) {
-      
+    button {
+      margin: 0 auto;
+      margin-top: 8%;
+      margin-left: 26%;
     }
+  }
 }

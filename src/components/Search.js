@@ -9,7 +9,7 @@ export default function Search() {
   };
 
   return (
-    <div className="search__base">
+    <div className="search__base" data-aos="fade-right" data-aos-duration="1500">
       <input
         type="text"
         name="search"
@@ -18,6 +18,7 @@ export default function Search() {
         onChange={handleChange}
         placeholder="Your search of and for history ends here."
       />
+      <button className="search btn">Search</button>
     </div>
   );
 }
