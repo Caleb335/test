@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive;
+}
+
+.landing__base {
+    background-image: url('../../assets/library.jpg');
+    height: 708px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .landing-intro {
+      width: 998px;
+      color: #fff;
+      font-size: 50px;
+      margin-left: 10%;
+    }
+    
+    .landing-intro h3 {
+      padding-top: 17%;
+    }
+
+    @media only screen and (max-width: 576px) {
+      
+    }
+}

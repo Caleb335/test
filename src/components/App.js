@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Landing from './Landing';
 
 export default function App() {
-    return (
-        <div>
-            <h1>Welcome</h1>
-        </div>
-    )
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+      </Switch>
+    </Router>
+  );
 }
