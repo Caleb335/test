@@ -47,6 +47,11 @@
   }
 
   @media only screen and (max-width: 576px) {
+    .landing__base {
+      height: 100%;
+      background-position: center;
+    }
+
     .landing-intro {
       width: 100%;
       margin: 0 auto;
